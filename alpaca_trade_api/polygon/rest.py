@@ -369,7 +369,6 @@ class REST(object):
         resp = self.get(path, version='v2')
         return self.response_wrapper(resp, Ticker)
     
-    #adding a function to get the snapshot for all tickers instead of just a single ticker
     def snapshot_all_tickers(self) -> Tickers:
         path = '/snapshot/locale/us/markets/stocks/tickers'
         resp = self.get(path, version='v2')['tickers']
